@@ -141,9 +141,10 @@ async function seedContent() {
         commentsCount: 0,
       },
     ];
-
     const createdContent = await db.content.createMany({ data: contentData });
     console.log('Created content:', createdContent);
+
+    
   } catch (error) {
     console.error('Error seeding content:', error);
     throw error;
